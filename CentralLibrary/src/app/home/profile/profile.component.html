@@ -1,0 +1,31 @@
+<div *ngIf="!signedIn" class="alert alert-danger alertDiv" role="alert">
+    Please sign In or Register to view your profile
+  </div>
+<div class="imgDiv" *ngIf="signedIn">
+    <img src="https://www.flaticon.com/svg/static/icons/svg/1507/1507187.svg" width="150" height="250"> 
+    <h5 class="card-title">UserId - {{User.id}}</h5>
+     <h5 class="card-text">userName - {{User.userName}}</h5>
+</div>
+  <div *ngIf="UserProfile.length === 0 && signedIn && isDataFetched===true">
+    <div class="alert alert-primary alertDiv" role="alert">
+        You have not borrowed any books.
+      </div> 
+</div>  
+<div *ngIf="IsReturned" class="alert alert-success alertDiv" role="alert">
+  You have successfully returned this copy
+</div> 
+
+
+<div class="container" *ngIf="signedIn">
+  <div *ngFor="let item of UserProfile;let i=index;" class="card cardDiv" style="width: 18rem;">
+      <img [src]="item.imageUrl" width="250" height="350">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <h5 class="card-title">{{item.author}}</h5>
+        <h5 class="card-title">{{item.fine}}</h5>
+          <a (click)="returnBook(item.id,i)" *ngIf="signedIn" class="btn btn-primary">Return</a>
+      </div>
+    </div>
+</div>
+
+

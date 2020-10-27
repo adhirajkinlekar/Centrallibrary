@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cardDiv{
+    display: flex;
+    align-items: center;
+    margin: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all .2s ease-in-out;
+}
+
+.cardDiv:hover { transform: scale(1.1); }
+
+
+
+i{
+    margin-left: 1em;
+}
+
+.imgDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alertDiv{
+    text-align: center;
+    margin-top: 1em;
+}

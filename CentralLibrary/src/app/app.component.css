@@ -1,0 +1,15 @@
+.anchorTag{
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+}
+.active{
+    font-weight: bold;
+}
+.profile{
+    transition: transform .2s;
+}
+
+.profile:hover {
+    transform: scale(1.2); 
+}

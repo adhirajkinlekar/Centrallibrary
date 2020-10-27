@@ -1,0 +1,19 @@
+.formDiv{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  .signInForm{
+      display: flex;
+      justify-content: center;
+      padding:15px 0 15px 0;
+  }
+  
+  .navbarDiv{
+      display: flex;
+      justify-content: flex-end;
+  }
+  
+.spinner{
+    margin-left: 1em;
+}

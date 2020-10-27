@@ -1,0 +1,17 @@
+ <nav class="navbar navbar-light bg-light justify-content-between">
+    <img src="https://www.flaticon.com/svg/static/icons/svg/3129/3129465.svg" width="50" height="60">
+    <div class="navbarDiv">
+    <ng-container *ngIf="signedIn | async">
+      <a class="anchorTag" routerLink="/library/profile" routerLinkActive="active">
+      <img  class="profile" src="https://www.flaticon.com/svg/static/icons/svg/1035/1035016.svg" width="50" height="60"></a>
+        <a class="anchorTag" routerLink="/library/home" routerLinkActive="active">Library</a>
+        <a class="anchorTag" routerLink="/signout" routerLinkActive="active">Signout</a>
+    </ng-container>
+  <ng-container  *ngIf="!(signedIn | async)">
+    <a class="anchorTag" routerLink="/signup" routerLinkActive="active">Signup</a>
+    <a class="anchorTag" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>Signin</a>
+  </ng-container>
+  </div>
+  </nav> 
+
+<router-outlet></router-outlet>
